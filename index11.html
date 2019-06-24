@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Average</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      // Begin a function named sample
+      var sample = function() {
+        // Define variable a equal to the formula (b=3)
+        // order of operations has b=3 first,
+        var a = (b = 3);
+      };
+      sample();
+      console.log("Is a defined?", typeof a !== "undefined");
+      console.log("Is b defined?", typeof b !== "undefined");
+      //   console.log("a: " + a);
+      console.log("b: " + b);
+    </script>
+  </body>
+</html>
+
+<!-- var sample = function(){
+  var a = b = 3;
+}
+sample();
+console.log("Is a defined?", typeof a !== "undefined");
+console.log("Is b defined?", typeof b !== "undefined"); -->

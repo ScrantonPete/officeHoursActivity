@@ -1,0 +1,52 @@
+<!-- //Without running the code, determine what the following code will output and why:
+
+var a = 1;
+function outer(){
+	var a = 2;
+	function inner(){
+		a++;
+    console.log(a);
+		var a = 5;
+	}
+	inner();
+}
+outer();
+
+in java script variables are moved to the top, they get hoisted
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      console.log(a);
+      var a = 1;
+      console.log(a);
+      function outer() {
+        console.log(a);
+        var a = 2;
+        console.log(a);
+        function inner() {
+          console.log(a);
+          a++;
+          console.log(a);
+          var a = 5;
+          console.log(a);
+        }
+        console.log(a);
+        inner();
+        console.log(a);
+      }
+      console.log(a);
+      outer();
+      console.log(a);
+    </script>
+  </body>
+</html>

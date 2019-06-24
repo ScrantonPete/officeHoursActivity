@@ -1,0 +1,119 @@
+<!-- Write a function that takes in a string and outputs the *first* occurrence of a character that does not repeat itself in that string.
+
+
+Ex:
+Input: "the quick brown fox jumps over the calm kitten quietly"
+Output: "b"
+
+Input: "this hat is the greatest!"
+Output: "g"
+
+Input: "what a wonderful day it has been!"
+Output: "o" -->
+
+<!-- Input String of words/letters
+
+separate string into individual letters
+
+compare the first letter with every other letter until you reach the end of the string
+
+if that letter does not repeat console.log that letter
+
+if that letter does repeat then check the 2nd letter, etc.-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>First Non-Repeating Character</title>
+  </head>
+
+  <body>
+    <script type="text/javascript">
+      function firstNonRepeatChar(str) {
+        var charCount = {};
+        for (var i = 0; i < str.length; i++) {
+          var char = str[i];
+          if (charCount[char]) {
+            charCount[char]++;
+          } else {
+            charCount[char] = 1;
+          }
+        }
+        for (var j in charCount) {
+          if (charCount[j] == 1) {
+            return j;
+          }
+        }
+      }
+
+      function firstNonRepeatChar2(str) {
+        for (var i = 0; i < str.length; i++) {
+          var c = str.charAt(i);
+          if (str.indexOf(c) === i && str.indexOf(c, i + 1) === -1) {
+            return c;
+          }
+        }
+      }
+
+      //     var findNonMatch = function(str) {
+      //         var input = str.toLowerCase();
+      //         for (var i = 0; i < str.length; i++) {
+      //           var letterTocheck = str[i];
+      //  b
+      //           if (letterTocheck !== str[i] + 1) {
+      //             return false;
+      //           }
+      //         }
+      //       };
+      //       //         for (var i = 0; i < input.length; i++) {
+      //             if (
+      //                 input[i] === "a" ||
+      //                 input[i] === "e" ||
+      //                 input[i] === "i" ||
+      //                 input[i] === "o" ||
+      //                 input[i] === "u"
+      //             ) {
+      //                 count++;
+      //             }
+      //         }
+
+      //         return count;
+      //     };
+
+      //     var countVowel2 = function (str) {
+      //         var count = 0;
+      //         var input = str.toLowerCase();
+      //         var vowelArr = ["a", "e", "i", "o", "u"];
+      //         for (var i = 0; i < input.length; i++) {
+      //             if (vowelArr.includes(input[i])) {
+      //                 count++;
+      //             }
+      //         }
+      //         return count;
+      //     };
+
+      //     <body>
+      // <script type="text/javascript">
+      //   var isPalindrom = function(str) {
+      //     for (var i = 0; i < str.length; i++) {
+      //       if (str[i] !== str[str.length - (i + 1)]) {
+      //         return false;
+      //       }
+      //     }
+      //     return true;
+      //   };
+
+      //   var isPalindrome2 = function(str) {
+      //     return (
+      //       str
+      //         .split("")
+      //         .reverse()
+      //         .join("") === str
+      //     );
+      //   };
+    </script>
+  </body>
+</html>

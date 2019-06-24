@@ -1,0 +1,41 @@
+<!-- Write a function that takes in an array of numbers and outputs the average of all the numbers.
+Ex:
+
+collect string
+add 1st item to 2nd item until you reach end of string
+take sum and divide by length of string
+reeturn average
+
+
+
+Input: [ 1 , 4 , 7 ]
+Output: 4
+
+Input: [ 10, 5 ]
+Output: 7.5
+
+Input: [ 1.5, 3, 2.5, 1 ]
+Output: 2 -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Average</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      function isAverage(arr) {
+        var sum = 0;
+        for (var i = 0; i < arr.length; i++) {
+          sum += arr[i];
+        }
+        return sum / arr.length;
+      }
+      //   var empty = [1, 4, 7];
+      console.log(isAverage([4, 4, 7]));
+    </script>
+  </body>
+</html>

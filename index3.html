@@ -1,0 +1,45 @@
+<!-- Write a function that takes in an array of numbers and outputs the maximum number.
+
+Ex:
+Input: [ 1, 2, 3 ]
+Output: 3
+
+Input: [ 3, 6, 4, 5, 2, 1 ]
+Output: 6
+
+Input: [ 3, 3, 3 ]
+Output: 3 -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Maximum #</title>
+
+    <script type="text/javascript">
+        var findMax = function (numArr) {
+            var maxNum = numArr[0];
+            for (var i = 1; i < numArr.length; i++) {
+                if (numArr[i] > maxNum) {
+                    maxNum = numArr[i];
+                }
+            }
+            return maxNum;
+        };
+        var myNums = [1, 2, 3];
+        console.log(findMax(myNums));
+
+
+    //   // Set up an array of numbers
+    //     var nums = [3, 3, 3];
+
+    //     // jQuery function max
+    //     console.log(Math.max.apply(null, nums));
+
+    </script>
+    </body>
+
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      function isDuplicate(arr) {
+        for (var i = 0; i < arr.length; i++) {
+          for (var j = 0; j < i; j++) {
+            if (arr[i] === arr[j]) {
+              return arr[i];
+            }
+          }
+        }
+      }
+
+      function isDuplicate2(arr) {
+        var dups = [];
+        for (var i = 0; i < arr.length; i++) {
+          if (dups.includes(arr[i])) {
+            return arr[i];
+          } else {
+            dups.push(arr[i]);
+          }
+        }
+      }
+    </script>
+  </body>
+</html>
+<!-- ```Write a function that takes an array of integers as an input and outputs the first duplicate.
+
+Ex:
+Input: [ 2, 5, 6, 3, 5 ]
+Output: 5
+
+Input: [ 1, 3, 4, 1, 3, 4 ]
+Output: 1
+
+Input: [ 2, 4, 5 ]
+Output: undefined
+
+-->
